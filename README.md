@@ -1,6 +1,6 @@
 This is my personal configuration for Nvim
 
-###Tools
+### Tools
  - Packer as package manager
  - nvim-tree
  - nvim-lsp
