@@ -9,7 +9,7 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup({
-				ensure_installed = { "lua_ls", "tsserver", "gopls", "pylsp" },
+				ensure_installed = { "lua_ls", "ts_ls", "gopls", "pylsp" },
 			})
 		end,
 	},
@@ -21,7 +21,7 @@ return {
 			lspconfig.lua_ls.setup({
         capabilities = capabilities
       })
-			lspconfig.tsserver.setup({
+			lspconfig.ts_ls.setup({
         capabilities = capabilities
       })
 			lspconfig.gopls.setup({
@@ -39,4 +39,20 @@ return {
 			vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {})
 		end,
 	},
+  {
+    'simrat39/rust-tools.nvim',
+    config = function ()
+      local rt = require("rust-tools")
+      rt.setup({
+        server = {
+          on_attach = function(_, bufnr)
+            -- Hover actions
+            vim.keymap.set("n", "<C-space>", rt.hover_actions.hover_actions, { buffer = bufnr })
+            -- Code action groups
+            vim.keymap.set("n", "<Leader>a", rt.code_action_group.code_action_group, { buffer = bufnr })
+          end,
+        },
+      })
+    end
+  },
 }
