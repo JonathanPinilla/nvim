@@ -1,6 +1,10 @@
 vim.lsp.enable({
   "jdtls",
   "lua_ls",
+  "javascript_ls",
+  "html_ls",
+  "prettier",
+  "vim"
 })
 
 vim.diagnostic.config({
