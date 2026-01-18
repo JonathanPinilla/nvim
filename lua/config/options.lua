@@ -39,3 +39,9 @@ vim.keymap.set('n', '<leader>e', "<cmd>Lexplore<CR>", { desc = "File explorer" }
 vim.keymap.set('n', '<leader>qj', "<cmd>cnext<CR>", { desc = "Quick fix next" })
 vim.keymap.set('n', '<leader>qk', "<cmd>cprev<CR>", { desc = "Quick fix prev" })
 vim.keymap.set('n', '<leader>h/', '<cmd>let @/=""<CR>', { desc = "Clear search" })
+
+-- hide nvim mode
+vim.opt.showmode = false
+
+-- setting for obsidian
+vim.opt.conceallevel = 2
