@@ -13,7 +13,6 @@ vim.opt.scrolloff = 10
 vim.opt.sidescrolloff = 8
 
 -- indentation
-vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.softtabstop = 2
 vim.opt.expandtab = true
@@ -23,7 +22,7 @@ vim.opt.autoindent = true
 -- Search settings
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
-vim.opt.hlsearch = false
+vim.opt.hlsearch = true
 vim.opt.incsearch = true
 
 -- Visual settings
@@ -39,3 +38,4 @@ vim.g.maploaclleader = " "
 vim.keymap.set('n', '<leader>e', "<cmd>Lexplore<CR>", { desc = "File explorer" })
 vim.keymap.set('n', '<leader>qj', "<cmd>cnext<CR>", { desc = "Quick fix next" })
 vim.keymap.set('n', '<leader>qk', "<cmd>cprev<CR>", { desc = "Quick fix prev" })
+vim.keymap.set('n', '<leader>h/', '<cmd>let @/=""<CR>', { desc = "Clear search" })
