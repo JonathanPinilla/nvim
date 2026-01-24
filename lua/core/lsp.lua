@@ -4,7 +4,8 @@ vim.lsp.enable({
   "javascript_ls",
   "html_ls",
   "prettier",
-  "vim"
+  "vim",
+  "clangd"
 })
 
 vim.diagnostic.config({
