@@ -3,6 +3,7 @@ vim.lsp.enable({
   "lua_ls",
   "javascript_ls",
   "html_ls",
+  "css_ls",
   "prettier",
   "vim",
   "clangd"
