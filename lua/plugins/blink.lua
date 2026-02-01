@@ -24,7 +24,7 @@ return {
         },
         keymap = {
           ["<C-f>"] = {},
-          ["<CR>"] = { "accept_and_enter", "fallback" },
+          ["<CR>"] = { "accept", "fallback" },
         },
         cmdline = {
           enabled = false,
